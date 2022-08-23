@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "bc353472-c416-4f90-afd2-608c7ada2c74",
+		"name": "Pro Rest Apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19042947"
+	},
+	"item": [
+		{
+			"name": "getAllUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4500/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userRegistration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Dean Ambrose\",\r\n    \"email\":\"example5.gmail.com\",\r\n    \"age\":24,\r\n    \"mobile\":\"1234567890\",\r\n    \"skills\":\"Wrestling\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4500/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSingleUserById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4500/user/6304ccb5de381b09fccaf073",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"user",
+						"6304ccb5de381b09fccaf073"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"Abhijeet Kumar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4500/user/6304c90ded1d92da22eb8067",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"user",
+						"6304c90ded1d92da22eb8067"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUserById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4500/user/6304c96f3c816dee6992b91b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4500",
+					"path": [
+						"user",
+						"6304c96f3c816dee6992b91b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
