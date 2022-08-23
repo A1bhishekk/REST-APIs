@@ -21,7 +21,7 @@ class UserController {
   static getAllUser = async (req, res) => {
     try {
       const result = await User.find();
-      res.send(result);
+      res.status(200).json({message:"get all users successfully", data: result});
     } catch (error) {
       res.send(error.message);
     }
@@ -41,7 +41,7 @@ class UserController {
   static updateUserById = async (req, res) => {
     try {
       const result = await User.findByIdAndUpdate(req.params.id, req.body);
-      res.json({ message: ` updated user successfully`, data: result });
+      res.status(202).json({ message: ` updated user successfully`, data: result });
     } catch (error) {
       res.send(error.message);
     }
@@ -55,7 +55,7 @@ class UserController {
         .status(204)
         .json({ message: ` deleted user successfully`, data: result });
     } catch (error) {
-      res.send(error.message);
+      res.status(204).json({message:"not found",error});
     }
   };
 }
